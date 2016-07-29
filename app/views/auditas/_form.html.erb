@@ -1,0 +1,25 @@
+<%= form_for(@audita) do |f| %>
+  <% if @audita.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@audita.errors.count, "error") %> prohibited this audita from being saved:</h2>
+
+      <ul>
+      <% @audita.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :questao_id %><br>
+    <%= f.number_field :questao_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @audita.user_id %>
+</p>
+
+<p>
+  <strong>Questao:</strong>
+  <%= @audita.questao_id %>
+</p>
+
+<%= link_to 'Edit', edit_audita_path(@audita) %> |
+<%= link_to 'Back', auditas_path %>
